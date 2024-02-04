@@ -57,4 +57,13 @@ class NewsController extends Controller
             "status_code" => "WN-04"
         ]);
     }
+
+    public function destroy($id){
+        News::find($id)->delete();
+
+        return response()->json([
+            "message" => "Delete data News success",
+            "status_code" => "WN-05"
+        ]);
+    }
 }

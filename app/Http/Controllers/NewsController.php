@@ -27,4 +27,19 @@ class NewsController extends Controller
             "status_code" => "WN-02"
         ]);
     }
+
+    public function store(Request $request) {
+        $news = News::create([
+            "image" => $request->image,
+            "title" => $request->title,
+            "content" => $request->content,
+            "writer" => $request->writer,
+        ]);
+
+        return response()->json([
+            "data" => $news,
+            "message" => "Create data News success",
+            "status_code" => "WN-03"
+        ]);
+    }
 }

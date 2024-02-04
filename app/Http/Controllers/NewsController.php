@@ -33,13 +33,28 @@ class NewsController extends Controller
             "image" => $request->image,
             "title" => $request->title,
             "content" => $request->content,
-            "writer" => $request->writer,
+            "writer" => $request->writer
         ]);
 
         return response()->json([
             "data" => $news,
             "message" => "Create data News success",
             "status_code" => "WN-03"
+        ]);
+    }
+
+    public function update(Request $request, $id) {
+        $news = News::find($id)->update([
+            "image" => $request->image,
+            "title" => $request->title,
+            "content" => $request->content,
+            "writer" => $request->writer
+        ]);
+
+        return response()->json([
+            "data" => $news,
+            "message" => "Update data News success",
+            "status_code" => "WN-04"
         ]);
     }
 }

@@ -1,0 +1,28 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+class _UploadFileController extends Controller
+{
+    public function __invoke(Request $request)
+    {
+        if ($request->hasFile("image")) {
+            $extentionFile = $request->file("image")->getClientOriginalExtension();
+            $fileNameToUpload = date("His") . uniqid() . "." . $extentionFile;
+
+            $request->file("image")->storeAs("images/", $fileNameToUpload, "public");
+            return response()->json([
+                "fileName" => $fileNameToUpload,
+                "message" => "Upload file success",
+                "status_code" => "WN-01"
+            ]);
+        } else {
+            // return response()->json([
+            //     "message" => "File is ",
+            //     "status_code" => "WN-01"
+            // ]);
+        }
+    }
+}

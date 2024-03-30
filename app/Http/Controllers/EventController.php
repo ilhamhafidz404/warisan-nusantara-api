@@ -7,9 +7,32 @@ use Illuminate\Http\Request;
 
 class EventController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $events = Event::orderBy("id", "DESC")->paginate(10);
+
+        $condition = $request->input('condition');
+        $whereSearch = "";
+        if ($condition == 1) {
+            $whereSearch = "title";
+        } else if ($condition == 2) {
+            $whereSearch = "description";
+        }
+
+        if ($request->has('search')) {
+            $search = $request->input('search');
+            $events = Event::where($whereSearch, 'like', "%$search%")->orderBy("id", "DESC")->paginate(10);
+        } else {
+            $events = Event::orderBy("id", "DESC")->paginate(10);
+        }
+
+
+        // if ($events->isEmpty()) {
+        //     return response()->json([
+        //             "message" => "No events found.",
+        //             "status_code" => "WN-02"
+        //         ], 404);
+        // }
+
         return response()->json([
             "data" => $events,
             "message" => "Get data Event success",

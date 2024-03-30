@@ -9,7 +9,7 @@ class EventController extends Controller
 {
     public function index()
     {
-        $events = Event::orderBy("id", "DESC")->get();
+        $events = Event::orderBy("id", "DESC")->paginate(10);
         return response()->json([
             "data" => $events,
             "message" => "Get data Event success",

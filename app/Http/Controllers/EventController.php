@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Event;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class EventController extends Controller
 {
@@ -55,6 +56,7 @@ class EventController extends Controller
 
         Event::create([
             "title" => $request->title,
+            "slug" => Str::slug($request->title),
             "description" => $request->description,
             "banner" => $request->banner,
             "started" => $request->startedDate . " " . $request->startedTime,
@@ -65,7 +67,8 @@ class EventController extends Controller
         ]);
 
         return response()->json([
-            "data" => $request->title
+            "message" => "Insert data Event success",
+            "status_code" => "WN-01"
         ]);
     }
 
@@ -83,7 +86,8 @@ class EventController extends Controller
         ]);
 
         return response()->json([
-            "data" => $request->title
+            "message" => "Update data Event success",
+            "status_code" => "WN-01"
         ]);
     }
 

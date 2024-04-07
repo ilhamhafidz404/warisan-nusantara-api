@@ -12,6 +12,7 @@ class EventController extends Controller
     {
 
         $condition = $request->input('condition');
+        $limit = $request->input('limit');
         $whereSearch = "";
         if ($condition == 1) {
             $whereSearch = "title";
@@ -21,9 +22,9 @@ class EventController extends Controller
 
         if ($request->has('search')) {
             $search = $request->input('search');
-            $events = Event::where($whereSearch, 'like', "%$search%")->orderBy("id", "DESC")->paginate(10);
+            $events = Event::where($whereSearch, 'like', "%$search%")->orderBy("id", "DESC")->paginate($limit);
         } else {
-            $events = Event::orderBy("id", "DESC")->paginate(10);
+            $events = Event::orderBy("id", "DESC")->paginate($limit);
         }
 
 

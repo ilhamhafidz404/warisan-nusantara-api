@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\_UploadFileController;
+use App\Http\Controllers\DashboardControllers;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\NewsController;
 use Illuminate\Http\Request;
@@ -24,3 +25,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::apiResource("/event", EventController::class);
 Route::post("/uploadfile", _UploadFileController::class);
 Route::apiResource("/berita", NewsController::class);
+Route::get("/dashboard", DashboardControllers::class);

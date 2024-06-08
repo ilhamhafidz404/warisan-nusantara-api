@@ -24,6 +24,8 @@ class EventSeeder extends Seeder
                 "fee" => 10000,
                 "location" => "Kuningan",
                 "for" => "all ages",
+                "longitude" => "0",
+                "latitude" => "0"
             ],
             [
                 "title" => "Batik Workshop: Unraveling Indonesia's Traditional Textile Art",
@@ -35,6 +37,8 @@ class EventSeeder extends Seeder
                 "fee" => 10000,
                 "location" => "Kuningan",
                 "for" => "all ages",
+                "longitude" => "0",
+                "latitude" => "0"
             ],
             [
                 "title" => "Gamelan Night: Traditional Javanese Music Concert",
@@ -46,6 +50,8 @@ class EventSeeder extends Seeder
                 "fee" => 10000,
                 "location" => "Kuningan",
                 "for" => "all ages",
+                "longitude" => "0",
+                "latitude" => "0"
             ],
             [
                 "title" => "Pesta Rakyat: Celebrating Indonesian Cultural Diversity",
@@ -57,6 +63,8 @@ class EventSeeder extends Seeder
                 "fee" => 10000,
                 "location" => "Kuningan",
                 "for" => "all ages",
+                "longitude" => "0",
+                "latitude" => "0"
             ],
             [
                 "title" => "Tari Saman: Exploring the Richness of Acehnese Dance",
@@ -68,6 +76,8 @@ class EventSeeder extends Seeder
                 "fee" => 10000,
                 "location" => "Kuningan",
                 "for" => "all ages",
+                "longitude" => "0",
+                "latitude" => "0"
             ],
             [
                 "title" => "Ritual of Melasti: Cleansing Ceremony by the Sea",
@@ -79,6 +89,8 @@ class EventSeeder extends Seeder
                 "fee" => 10000,
                 "location" => "Kuningan",
                 "for" => "all ages",
+                "longitude" => "0",
+                "latitude" => "0"
             ],
             [
                 "title" => "Pasar Seni: Showcasing Indonesian Art and Craftsmanship",
@@ -90,6 +102,8 @@ class EventSeeder extends Seeder
                 "fee" => 10000,
                 "location" => "Kuningan",
                 "for" => "all ages",
+                "longitude" => "0",
+                "latitude" => "0"
             ],
             [
                 "title" => "Culinary Journey: Discovering the Flavors of Indonesian Cuisine",
@@ -101,6 +115,8 @@ class EventSeeder extends Seeder
                 "fee" => 10000,
                 "location" => "Kuningan",
                 "for" => "all ages",
+                "longitude" => "0",
+                "latitude" => "0"
             ],
             [
                 "title" => "Kuda Lumping Spectacular: A Traditional Javanese Dance Performance",
@@ -112,6 +128,8 @@ class EventSeeder extends Seeder
                 "fee" => 10000,
                 "location" => "Kuningan",
                 "for" => "all ages",
+                "longitude" => "0",
+                "latitude" => "0"
             ],
             [
                 "title" => "Bunaken Marine Festival: Preserving Indonesia's Underwater Heritage",
@@ -123,6 +141,8 @@ class EventSeeder extends Seeder
                 "fee" => 10000,
                 "location" => "Kuningan",
                 "for" => "all ages",
+                "longitude" => "0",
+                "latitude" => "0"
             ],
             [
                 "title" => "Lontar Weaving Workshop: Exploring the Art of Balinese Palm Leaf Manuscript Crafting",
@@ -134,6 +154,8 @@ class EventSeeder extends Seeder
                 "fee" => 10000,
                 "location" => "Kuningan",
                 "for" => "all ages",
+                "longitude" => "0",
+                "latitude" => "0"
             ],
         ]);
     }

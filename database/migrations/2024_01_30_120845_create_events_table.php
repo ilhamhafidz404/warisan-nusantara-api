@@ -21,6 +21,8 @@ return new class extends Migration
             $table->dateTime("ended");
             $table->integer("fee");
             $table->string("location");
+            $table->string("longitude");
+            $table->string("latitude");
             $table->enum("for", ["all ages", "mature"]);
             $table->timestamps();
         });

@@ -65,6 +65,8 @@ class EventController extends Controller
             "fee" => $request->fee,
             "location" => $request->location,
             "for" => $request->for,
+            "latitude" => $request->lat,
+            "longitude" => $request->lng,
         ]);
 
         return response()->json([
